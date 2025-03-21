@@ -18,7 +18,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("api/", include('tasks.urls'))
+    path("admin/", admin.site.urls), # Admin stuff
+    path('api/users/', include('users.urls')), # user Registration, Login, Token Refresh
+    path("api/tasks/", include('tasks.urls')), # task Create, Read, Update, Delete
 ]

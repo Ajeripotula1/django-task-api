@@ -1,4 +1,5 @@
 from django.db import models # models module from django provides classes and methods to define models
+from django.contrib.auth.models import User
 import uuid
 
 # Create your models here.
@@ -13,6 +14,7 @@ class Task(models.Model):
     completed   = models.BooleanField(default=False)
     created_at  = models.DateTimeField(auto_now_add=True)
     updated_at  = models.DateTimeField(auto_now=True)
+    user        = models.ForeignKey(User,on_delete=models.CASCADE)
     # Special class to define metadata for the model (options and behaviors for model that don't directly relate to fields)
     class Meta:
         ordering = ['-created_at'] # default order for task when they are retrieved from database (minus means descending)
