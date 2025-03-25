@@ -1,13 +1,42 @@
-# django-task-api
+# Django + React Task Tracker
+This repository contains a task tracker web application built with Django and React. It allows users to register, log in, manage their tasks, and perform CRUD (Create, Read, Update, Delete) operations on them. The application includes both a backend API built with Django REST framework and a frontend built with React.
 
-Simple Task Managment application. Users can create, update or delete tasks as well as filter their tasks based on completion status. 
+## Frontend (React)
+The React frontend enables users to:
 
-The API has the following endpoints
+Register & Log in: Users can create an account and log in with credentials.
 
-GET /api/tasks/ for listing tasks or creating new tasks.
+Manage Tasks: Users can create, view, and delete tasks.
 
-GET /api/tasks/<id>/ for retrieving a specific task.
+Responsive Design: A mobile-friendly interface for easy task management.
 
-PUT /api/tasks/<id>/ for updating a specific task.
 
-DELETE /api/tasks/<id>/ for deleting a specific task.
+## Backend (Django REST API)
+The Django backend provides the following API endpoints:
+
+POST /api/user/register - Registers a new user.
+
+POST /api/user/login - Authenticates user and returns access & refresh tokens.
+
+POST /api/user/refresh - Refreshes the access token.
+
+GET /api/tasks/ - Retrieves all tasks for the authenticated user.
+
+POST /api/tasks/ - Creates a new task.
+
+DELETE /api/tasks/{id} - Deletes a task by ID.
+
+## Backend Setup  
+1. clone the repo: git clone https://github.com/Ajeripotula1/django-task-api.git
+2. install dependencies : pip install -r requirements.txt
+3. apply migrations and run the server:
+python manage.py migrate
+python manage.py runserver
+
+## Frontend Setup 
+1. Install dependencies:
+cd frontend
+npm install
+2. start the react server:
+npm start
+   
