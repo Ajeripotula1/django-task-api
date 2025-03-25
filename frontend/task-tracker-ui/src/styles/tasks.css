@@ -1,0 +1,60 @@
+.task-container{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    min-height: 600px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative; /* Make this container the reference point for absolute positioning */
+
+}
+
+.new-task-header {
+    margin-top: 50px;
+    font-size: 36px;
+    color: #6c63ff;
+}
+.new-task-bar{
+    width: 70%;
+    background: #edeef0;
+    height:40px;
+    font-size: 20px;
+    border:none;
+    outline:none;
+    border-radius: 50px;
+    padding-left: 30px;
+}
+.add-btn {
+    border-radius: 50px;
+    background-color:#6C63FF;
+    border: none;
+    outline:none;
+    font-weight: 600;
+    margin: -40px;
+    width: 90px;
+    height: 40px;
+    color:#edeef0;
+    cursor: pointer;
+}
+.add-btn:hover{
+    /* color:#6C63FF;
+    background-color: #edeef0; */
+    transform: scale(1.1); /* Slight scaling effect */
+
+}
+.empty {
+    margin-top: 100px;
+}
+.logout {
+    position: absolute;
+    top: 20px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the right */
+    border-radius: 10px;
+    background-color:#6C63FF;
+    color: white;
+    outline:none;
+    border: none;
+    height: 25px;
+
+}

@@ -44,17 +44,27 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     # Our local apps
     'tasks',
-    'users'
+    'users',
+    
+    # FE integration
+    'corsheaders'
 ]
+
+CORS_ALLOWED_ORIGINS = [
+            'http://localhost:5173',
+        ]
+CORS_ALLOW_CREDENTIALS = True  # Allow cookies and credentials if needed
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware", # allow cors
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+   
 ]
 
 ROOT_URLCONF = "taskmanager.urls"
@@ -139,11 +149,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES' : [
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
-    'DEFAULT_PERMISSION_CLASSE': [
+    'DEFAULT_PERMISSION_CLASSEs': [
         'rest_framework.permissions.IsAuthenticated'
     ],
-    'DEFAULT_PAGINATION_CLASSES': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
 }
 
 SIMPLE_JWT = {

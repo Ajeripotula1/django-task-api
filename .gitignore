@@ -3,3 +3,27 @@
 .vscode/
 __pycache__/
 db.sqlite3
+
+# Node
+node_modules/
+
+# Django
+*.pyc
+*.pyo
+__pycache__/
+db.sqlite3
+
+# Virtualenv
+venv/
+env/
+
+# Build files
+build/
+dist/
+
+# Logs
+*.log
+
+# .env files
+.env
+.env.*

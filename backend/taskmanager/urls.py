@@ -21,6 +21,6 @@ from django.urls import path,include
 
 urlpatterns = [
     path("admin/", admin.site.urls), # Admin stuff
-    path('api/users/', include('users.urls')), # user Registration, Login, Token Refresh
+    path('api/user/', include('users.urls')), # user Registration, Login, Token Refresh
     path("api/tasks/", include('tasks.urls')), # task Create, Read, Update, Delete
 ]

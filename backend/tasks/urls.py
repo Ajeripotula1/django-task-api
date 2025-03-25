@@ -1,7 +1,6 @@
 from django.urls import path, include # used for defining URL patterns in Django
 # from rest_framework.routers import DefaultRouter # DRF utility that automatically generates API routes for ViewSets
 from .views import TaskListCreateView, TaskDetailView
-from uuid import UUID
 
 # # create a router to automatically generate API endpoints for our viewset
 # router = DefaultRouter()

@@ -64,17 +64,17 @@ class TaskDetailView(views.APIView):
         serializer = TaskSerializer(task) # serialize task into JSON
         return Response(serializer.data)
     
-    def put(self,request, id):
+    def patch(self,request, id):
         '''PUT tasks/<int:id>'''
         
         task = get_object_or_404(Task,id=id)
         # pass exisiting model instance, and data u want to update 
-        serializer = TaskSerializer(task,data=request.data) # serialize new/upated data JSON Data -> Py
+        serializer = TaskSerializer(task,data=request.data, partial=True) # serialize new/upated data JSON Data -> Py
         # validate updated data
         if serializer.is_valid():
             # save if is, dont otw
             serializer.save()
-            return Response(serializer.data)
+            return Response(serializer.data, status= status.HTTP_200_OK)
         return Response(serializer.error,status=status.HTTP_400_BAD_REQUEST)
     
     def delete(self,request,id):

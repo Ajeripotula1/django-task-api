@@ -1,0 +1,16 @@
+.task-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 40px;
+    font-size: 20px;
+    background-color:rgba(249, 249, 249, 0.892);
+    margin: 10px 20px;
+
+    border-radius: 50px;
+}
+.delete{
+    cursor: pointer;
+    color:#6c63ff;
+    font-weight: 500;
+}
