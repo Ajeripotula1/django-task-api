@@ -6,9 +6,7 @@ The React frontend enables users to:
 
 Register & Log in: Users can create an account and log in with credentials.
 
-Manage Tasks: Users can create, view, and delete tasks.
-
-Responsive Design: A mobile-friendly interface for easy task management.
+Manage Tasks: Users can create, view, and delete their tasks.
 
 
 ## Backend (Django REST API)
@@ -35,7 +33,7 @@ python manage.py runserver
 
 ## Frontend Setup 
 1. Install dependencies:
-cd frontend
+cd frontend/task-tracker-ui 
 npm install
 2. start the react server:
 npm start
