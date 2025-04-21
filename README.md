@@ -28,13 +28,13 @@ DELETE /api/tasks/{id} - Deletes a task by ID.
 1. clone the repo: git clone https://github.com/Ajeripotula1/django-task-api.git
 2. install dependencies : pip install -r requirements.txt
 3. apply migrations and run the server:
-python manage.py migrate
-python manage.py runserver
+- python manage.py migrate 
+- python manage.py runserver
 
 ## Frontend Setup 
 1. Install dependencies:
-cd frontend/task-tracker-ui 
-npm install
+- cd frontend/task-tracker-ui 
+- npm install
 2. start the react server:
-npm start
+- npm start
    
